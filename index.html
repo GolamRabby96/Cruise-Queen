@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Curise Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1>Cruise Queen</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
+        </div>
+
+
+        <div class="booking-form">
+            <h3>Book Ocean Time</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input id="flying-form" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh" value="Dhaka" >
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input id="flying-to" class="inp-style" type="text" name="" placeholder="New York, United States" value="New Work">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input id="departure-time" class="inp-style" type="date" name="" default="01" value="2021-01-01" >
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input id="return-time" class="inp-style" type="date" name="" value="2021-07-01">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input id="firstClass-count" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <p class="plus-minus"> 
+                        <a id="firstClass-add" href="#">+</a>
+                         <a id="firstClass-delete"  href="#">-</a> 
+                    </p>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <div class="plus-minus-btn">
+                        <p class="plus-minus"> 
+                            <a id="economy-add" href="#">+</a>
+                             <a id="economy-delete"  href="#">-</a> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="sub-total">00</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="vat-amount">00</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="total-amount">00</span></p>
+                    </div>
+                </div>
+            </div>
+            <button id="book-now" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-style" >Book Now</button>
+        </div>
+    </main>
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CRUISE QUEEN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body upside-down">
+            <p>Flying: <b><span id="form-location">Dhaka</span> To <span id="to-location">New Work</span></b></p>
+            <hr>
+            <p>Date: <b><span id="form-date">01/01/2021</span> --> &nbsp; &nbsp; To &nbsp; &nbsp;  --> <span id="to-date">07/01/2021</span></b></p>
+            <hr>
+            <p>First Class ticket : <b><span id="slide-first-count">0</span></b></p>
+            <hr>
+            <p>Economy ticket : <b><span id="slide-economy-count">0</span></b></p>
+            <hr>
+            <p>Subtotal Amount : <b>$ <span id="slideSub-total">0</span></b></p>
+            <p>Vat Amount : <b>$ <span id="slideVat-amount">0</span></b></p>
+            <hr> <hr>
+            <h5>Total Amount : <b>$ <span id="slideTotal-amount">0</span></b></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--Thank You-->
+    <!-- ....................................  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
