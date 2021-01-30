@@ -35,11 +35,12 @@ function calculateTotal() {
 	const economyTicket = getCountValue("economy");
 	const subTotalAmount = firstClassTicket * 150 + economyTicket * 100;
 	const vatAmount = subTotalAmount * 0.1;
-	const totalAmount = subTotalAmount + vatAmount;
+    const totalAmount = subTotalAmount + vatAmount;
 	document.getElementById("sub-total").innerText = subTotalAmount;
 	document.getElementById("vat-amount").innerText = vatAmount;
 	document.getElementById("total-amount").innerText = totalAmount;
 }
+
 
 function getCountValue(ticket) {
 	const ticketInput = document.getElementById(ticket + "-count");
@@ -54,10 +55,10 @@ document.getElementById("book-now").addEventListener("click", function () {
 	const slideSubTotalAmount = slideFirstClass * 150 + slideEconomy * 100;
 	const slideVatAmount = slideSubTotalAmount * 0.1;
 	const slideTotalAmount = slideSubTotalAmount + slideVatAmount;
-    console.log(slideSubTotalAmount,slideVatAmount,slideTotalAmount);
     
     document.getElementById('slide-first-count').innerText = slideFirstClass;
     document.getElementById('slide-economy-count').innerText = slideEconomy;
+
 	document.getElementById("slideSub-total").innerText = slideSubTotalAmount;
 	document.getElementById("slideVat-amount").innerText = slideVatAmount;
     document.getElementById("slideTotal-amount").innerText = slideTotalAmount;
